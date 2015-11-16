@@ -1,0 +1,11 @@
+{
+  "development": {
+    "SERVER_API":"test"
+  },
+  "staging": {
+    "SERVER_API":"test"
+  },
+  "production": {
+    "SERVER_API":"SERVER_API_VALUE"
+  }
+}

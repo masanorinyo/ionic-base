@@ -1,0 +1,32 @@
+/****************/
+/* Gruop Styles */
+/****************/
+
+// third vendor scss files
+@import "common/styles/vendors/normalize";
+@import "common/styles/vendors/ionic.override";
+
+// // modules 
+@import "common/styles/modules/colors";
+@import "common/styles/modules/variables";
+@import "common/styles/modules/fonts";
+@import "common/styles/modules/buttons";
+@import "common/styles/modules/animations";
+
+// // partials 
+@import "common/styles/partials/main";
+@import "common/styles/partials/header";
+
+// directives
+@import "common/scripts/directives/groupBtn/groupBtn";
+@import 'common/scripts/directives/optionBtn/optionBtn';
+@import 'common/scripts/directives/groupList/groupList';
+
+/******************/
+/* Feature Styles */
+/******************/
+// Create group
+
+// // Other features
+@import "habits/habits";
+

@@ -1,0 +1,38 @@
+doctype
+<!--[if lt IE 7]><html lang="en" class="lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9"><![endif]-->
+<!--[if !IE]><!-->
+html(lang="en" ng-app="ionic-base" )
+  <!--<![endif]-->
+  head
+    title( ng-bind-template="{{page}}" ) 
+    meta( charset="utf-8")
+    meta( name="description", content="" )
+    meta( name="viewport", content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no")
+    
+    <!-- inject:css -->
+    <!-- endinject -->
+
+  body( class="{{page}}" )
+    
+    ion-nav-bar
+    ion-nav-view
+
+    <!--INJECT:cdns-->
+    <!--END INJECT-->
+    
+    
+    <!-- libs:js -->
+    <!-- endinject -->
+
+    <!-- vendor:js -->
+    <!-- endinject -->
+    
+    <!-- cordova script (this will be a 404 during development) -->
+    script( src="cordova.js" )
+
+    script( src="app/constants.js" )
+
+    <!-- inject:js -->
+    <!-- endinject -->

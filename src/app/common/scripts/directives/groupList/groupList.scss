@@ -1,0 +1,29 @@
+.groupList {
+  /*  groupList styles here   */
+  .group-list-line{
+    padding: 12px 10px;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    border: 1px solid $border-very-light;
+    border-bottom: none;
+
+    &:nth-last-child(1){
+      border-bottom: 1px solid $border-very-light;
+    }
+
+    &.active{
+      background-color: $primary-color;
+      .line-text{
+        color: white;
+      }
+    }
+  }
+
+  .icon-check{
+    float: right;
+    font-size: 1em;
+    padding-right: 10px;
+    color: white;
+  }
+
+}

@@ -1,0 +1,25 @@
+.group-btns{
+  
+  border: 1px solid $border-secondary-color;
+  width: 50%;
+  border-radius: 2px;
+  
+  .group-btn{
+    padding: 3px 10px;
+    width: 33.33%;
+    text-align: center;
+    border-right: 1px solid $border-secondary-color;
+    color: $font-secondary-color;
+    display: inline-block;
+    font-size: 0.9em;
+    
+    &.active{
+      background-color: $primary-color;
+      color:$primary-reverse-color;
+    }
+
+    &:last-child{
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.btn-item{
+  border: 2px solid $border-secondary-color;
+  padding: 7px 20px 7px 35px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: rgb(149,148,148);
+  text-transform: capitalize;
+}
+
+.btn-arrow-right {
+    
+  position: absolute;
+  right: 8px;
+  top: 0px;
+  bottom: 0;
+  margin: auto;
+  z-index: 100;
+  padding: 9px;
+  color: rgb(164,163,163);
+  
+  .btn-arrow-title {
+    float: left;
+    text-transform: uppercase;
+    padding-right: 12px;
+  }
+  .btn-arrow-icon {
+      float: right;
+  }
+}
+
+.icon-positioned-left{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  z-index: 100;
+  margin: auto;
+  height: 20px;
+  color: rgb(170,170,170);
+}

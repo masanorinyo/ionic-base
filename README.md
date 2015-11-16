@@ -1,2 +1,1 @@
-# ionic-base
-Base work for ionic project
+# Base app for ionic project

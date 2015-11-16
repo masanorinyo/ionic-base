@@ -1,0 +1,28 @@
+.nav{
+
+  color: $icon-secondary-color; 
+  
+  &-icon{
+    &:before{
+      font-size: 20px !important;
+      line-height: 40px;
+    }
+  }
+
+  &-text-btn{
+    letter-spacing: 0.5px;
+    line-height: 33px;
+    font-size: 0.9em;
+    background: none;
+    border: none;
+
+    &:active{
+      color: $icon-secondary-active-color;
+    }
+  }
+}
+
+.page-title{
+  color: $font-secondary-color;
+  font-size: 0.8em;
+}

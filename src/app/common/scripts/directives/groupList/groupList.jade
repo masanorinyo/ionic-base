@@ -1,0 +1,5 @@
+.groupList
+  .group-list
+    .group-list-line( ng-class="{ 'active': activeList.value == list.value }"  ng-repeat="list in groupList" ng-click="activateList(list)") 
+      span.line-text {{list.display}}
+      i.icon-check.ion-checkmark-round( ng-show="activeList.value == list.value" )

@@ -1,0 +1,46 @@
+.option-btns{
+
+  &.circle{
+    width: 280px;
+    margin: auto;
+    
+    .option-btn{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 5px;  
+      border-radius: 50px;
+    }
+    
+  }
+
+  &.square{
+    width: 100%;
+    margin: auto;
+
+    .option-btn{
+      width: 13.2%;
+      margin-right: 1%;
+      height: 40px;
+      line-height: 40px;
+
+      &:nth-last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  .option-btn{
+    color: $font-secondary-color;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    border: 1px solid $border-very-light;
+    &.active{
+      background-color: $primary-color;
+      color:$primary-reverse-color;
+    }
+
+  }
+}
