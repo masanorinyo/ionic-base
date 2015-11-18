@@ -119,6 +119,7 @@ global.config = {
       template: APP_PATH+"/config/nginx/nginx.conf.temp"
     },
     host : {
+      local : "http://localhost",
       ip : "http://localhost"
     },
     ports: {

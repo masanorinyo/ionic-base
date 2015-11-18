@@ -76,6 +76,14 @@ module.exports = function(config) {
       lines: 1
     },
 
+    coverageReporter: {
+      dir : 'coverage/',
+      reporters: [
+        { type: 'html', subdir: 'report-html' },
+        { type: 'text-summary', subdir: '.', file: 'text-summary.txt' },
+      ]
+    },
+
     // Optional Settings 
     notifyReporter: {
       reportEachFailure: true, 

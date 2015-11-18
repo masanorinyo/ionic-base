@@ -29,8 +29,7 @@ module.exports = gulp.task('default', function () {
       "cachebust",
       "inject",
       ["analysis","sizereport"],
-      "ionic:serve",
-      "test"
+      "ionic:serve"
     );
 
   } else {

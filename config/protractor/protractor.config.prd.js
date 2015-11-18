@@ -1,3 +1,5 @@
+// PRD config
+// 
 exports.config = {
   
   //{{_INSERT_SELENIUM_ADDRESS_}}
@@ -11,7 +13,7 @@ exports.config = {
   //{{_INSERT_BROWSER_}}
   ],
 
-  baseUrl: '{{_TEST_ADDRESS_}}',
+  // baseUrl: '{{_TEST_ADDRESS_}}',
 
   maxSessions: 1,
 
