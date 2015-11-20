@@ -1,4 +1,4 @@
 "use strict";
 
-module.exports = angular.module('habiteater.directives.optionBtn', [])
+module.exports = angular.module('ionic-base.directives.optionBtn', [])
   .directive('optionBtnDirective',require('./optionBtn.directive'));

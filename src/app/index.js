@@ -4,32 +4,32 @@ module.exports = angular.module( 'ionic-base.modules', [
   // "gulp module" will automatically insert a new module 
   // DO NOT REMOVE THE BELOW COMMENT
   //{{INSERT-MODULE}}
-  require('./habits').name,
+  require('./main').name,
 ]);
 
 module.exports = angular.module( 'ionic-base.services', [
   // "gulp module" will automatically insert a new service 
   // DO NOT REMOVE THE BELOW COMMENT
   //{{INSERT-SERVICE}}
-  // require('./common/scripts/services/utility').name,
-  // require('./common/scripts/services/modal').name,
+  require('./common/scripts/services/utility').name,
+  require('./common/scripts/services/modal').name,
 ]);
 
 module.exports = angular.module( 'ionic-base.filters', [
   // "gulp module" will automatically insert a new filter
   // DO NOT REMOVE THE BELOW COMMENT
   //{{INSERT-FILTER}}
-  // require('./common/scripts/filters/convertInvalid').name,
-  // require('./common/scripts/filters/toFlattenString').name,
+  require('./common/scripts/filters/convertInvalid').name,
+  require('./common/scripts/filters/toFlattenString').name,
 ]);
 
 module.exports = angular.module( 'ionic-base.directives', [
   // "gulp module" will automatically insert a new directive 
   // DO NOT REMOVE THE BELOW COMMENT
   //{{INSERT-DIRECTIVE}}
-  // require('./common/scripts/directives/groupList').name,
-  // require('./common/scripts/directives/optionBtn').name,
-  // require('./common/scripts/directives/groupBtn').name, 
+  require('./common/scripts/directives/groupList').name,
+  require('./common/scripts/directives/optionBtn').name,
+  require('./common/scripts/directives/groupBtn').name, 
 ]);
 
 

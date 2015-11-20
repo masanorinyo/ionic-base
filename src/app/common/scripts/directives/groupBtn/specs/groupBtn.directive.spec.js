@@ -1,6 +1,6 @@
 "use strict";
     
-xdescribe("habiteater module", function() {
+describe("group-btn directive", function() {
 
   var compile, scope, directiveElem;
 
@@ -13,7 +13,7 @@ xdescribe("habiteater module", function() {
     return compiledElement;
   }
   
-  beforeEach(angular.mock.module("habiteater", function($provide, $urlRouterProvider){
+  beforeEach(angular.mock.module("ionic-base", function($provide, $urlRouterProvider){
     $provide.value('$ionicTemplateCache', function(){} );
     $urlRouterProvider.deferIntercept();
   }));

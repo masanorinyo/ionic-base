@@ -1,10 +1,10 @@
 "use strict";
     
-xdescribe("utilityService module", function() {
+describe("utilityService module", function() {
   
   var utilityService, $rootScope, $ionicPopup;
 
-  beforeEach(angular.mock.module("habiteater"));
+  beforeEach(angular.mock.module("ionic-base"));
   beforeEach(inject(function( _utilityService_, _$rootScope_, _$ionicPopup_ ){
     utilityService = _utilityService_;
     $rootScope = _$rootScope_;

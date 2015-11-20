@@ -1,4 +1,4 @@
 "use strict";
 
-module.exports = angular.module('habiteater.filters.toFlattenString', [])
+module.exports = angular.module('ionic-base.filters.toFlattenString', [])
   .filter( 'toFlattenString',require('./toFlattenString.filter'));

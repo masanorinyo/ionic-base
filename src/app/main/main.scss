@@ -1,7 +1,7 @@
-.habits .bar-header{
+.main .bar-header{
   display: none !important;
 }
-.page-habits{
+.page-main{
   .info-box{
     .box-background{
       height: 120px;
@@ -14,7 +14,7 @@
         right: 0;
         z-index: -1;
         display: block;
-        background-image: url("habits/assets/info-background.jpg");
+        background-image: url("main/assets/info-background.jpg");
         background-size: 100%;
         background-position: 0 -10px;
         height: 120px;

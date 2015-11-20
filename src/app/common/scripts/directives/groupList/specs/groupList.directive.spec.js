@@ -1,6 +1,6 @@
 "use strict";
     
-xdescribe("[ groupList directive ]:", function() {
+describe("[ groupList directive ]:", function() {
 
   var ctrl, 
       compile, 
@@ -14,7 +14,7 @@ xdescribe("[ groupList directive ]:", function() {
     return compiledElement;
   }
   
-  beforeEach(angular.mock.module("habiteater", function($provide, $urlRouterProvider){
+  beforeEach(angular.mock.module("ionic-base", function($provide, $urlRouterProvider){
     $provide.value('$ionicTemplateCache', function(){} );
     $urlRouterProvider.deferIntercept();
   }));

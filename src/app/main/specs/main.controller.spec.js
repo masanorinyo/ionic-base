@@ -1,13 +1,13 @@
 "use strict";
 
-describe("[ Habits controller ] :", function(){
+describe("[ Main controller ] :", function(){
   
   var habitsCtrl, scopel;
   
   beforeEach(angular.mock.module("ionic-base"));
 
   beforeEach(inject(function($controller) {
-    habitsCtrl = $controller('habitsController', {});
+    habitsCtrl = $controller('mainController', {});
   }));
 
   it('test',function(){

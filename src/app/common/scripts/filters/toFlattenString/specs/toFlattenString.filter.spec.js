@@ -1,10 +1,10 @@
 "use strict";
     
-xdescribe("[ toString filter ]:", function() {
+describe("[ toString filter ]:", function() {
   
   var $filter;
 
-  beforeEach(angular.mock.module("habiteater"));
+  beforeEach(angular.mock.module("ionic-base"));
 
   it('toFlattenString exists', inject(function(_$filter_) {
     $filter = _$filter_;

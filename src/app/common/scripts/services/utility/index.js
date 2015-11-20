@@ -1,4 +1,4 @@
 "use strict";
 
-module.exports = angular.module('habiteater.services.utility', [])
+module.exports = angular.module('ionic-base.services.utility', [])
   .factory( 'utilityService',require('./utility.service'));

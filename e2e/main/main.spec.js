@@ -2,7 +2,7 @@
 
 // main page
 describe('Main page', function() {
-  it('should have a title "web base"', function() {
-    expect(browser.getTitle()).toEqual('Web base');
+  it('should have a title "main"', function() {
+    expect(browser.getTitle()).toEqual('main');
   });
 });

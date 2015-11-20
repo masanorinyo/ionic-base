@@ -1,10 +1,10 @@
 "use strict";
     
-xdescribe("[ checkNull filter ]:", function() {
+describe("[ checkNull filter ]:", function() {
   
   var $filter;
 
-  beforeEach(angular.mock.module("habiteater"));
+  beforeEach(angular.mock.module("ionic-base"));
 
   it('convertInvalid exists', inject(function(_$filter_) {
     $filter = _$filter_;

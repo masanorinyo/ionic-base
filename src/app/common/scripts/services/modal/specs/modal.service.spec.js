@@ -1,8 +1,8 @@
 "use strict";
     
-xdescribe("modal module", function() {
+describe("modal module", function() {
   
-  beforeEach(angular.mock.module("habiteater"));
+  beforeEach(angular.mock.module("ionic-base"));
 
   it('has modal service', inject(function(modalService) {
     expect(modalService).not.toBeNull();
