@@ -14,7 +14,8 @@ module.exports = gulp.task('default', function () {
       ["template","images",'misc','svg','i18n',"constant"],
       ["browserify","styles", 'fonts'],
       "cachebust",
-      "inject"
+      "inject",
+      "ionic:ios"
     );
 
   }else if ( staging ) {
