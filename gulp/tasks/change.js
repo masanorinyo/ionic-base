@@ -9,12 +9,15 @@ var gulp = require('gulp'),
 
 module.exports = gulp.task('change:name', function () {
   var all_app_path = [
-    APP_PATH + "/**/*",
-    "!" + APP_PATH + "/node_modules",
-    "!" + APP_PATH + "/src/bower_components",
-    "!" + APP_PATH + "/hooks",
-    "!" + APP_PATH + "/platforms",
-    "!" + APP_PATH + "/plugins",
+    APP_PATH + "/gulp/**/*.js",
+    APP_PATH + "/gulp/*.js",
+    APP_PATH + "/src/*",
+    APP_PATH + "/src/**/*",
+    APP_PATH + "/e2e/**/*",
+    APP_PATH + "/e2e/*",
+    APP_PATH + "/config/**/*",
+    APP_PATH + "/config/*",
+    APP_PATH + "/*",
   ];
   return gulp.src(all_app_path)
     .pipe(prompt.prompt([{
@@ -24,7 +27,7 @@ module.exports = gulp.task('change:name', function () {
         default: "app"
     }], function(res){
       gulp.src(all_app_path)
-        .pipe(replace("ionic-app", res.app_name))
+        .pipe(replace("ionic-base", res.app_name))
         .pipe(gulp.dest(APP_PATH));
     }));
   
