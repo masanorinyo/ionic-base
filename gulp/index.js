@@ -13,16 +13,17 @@ var fs = require('fs'),
 
 var options = minimist(process.argv.slice(2), knownOptions);
 
-require('./config');
-
+//==== these need to run before "require('./config')" ===/
 // platform
 global.ios = argv.ios;
 global.android = argv.android;
 global.mobile = ( global.android || global.ios );
-
-// env 
+// env
 global.production = argv.production;
 global.staging = argv.staging;
+//========================================================/
+
+require('./config');
 
 // other params
 global.all = argv.all;
