@@ -15,11 +15,19 @@ var options = minimist(process.argv.slice(2), knownOptions);
 
 require('./config');
 
+// platform
+global.ios = argv.ios;
+global.android = argv.android;
+global.mobile = ( global.android || global.ios );
+
+// env 
+global.production = argv.production;
+global.staging = argv.staging;
+
+// other params
 global.all = argv.all;
 global.local = argv.local;
 global.ghostOn = argv.ghostOn;
-global.production = argv.production;
-global.staging = argv.staging;
 global.test = argv.test;
 global.nolint = argv.nolint;
 global.safari = argv.safari;

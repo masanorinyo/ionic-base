@@ -5,6 +5,7 @@ var gulp        = require('gulp'),
     util = require('util'),
     devip = require('dev-ip'),
     history = require('connect-history-api-fallback'),
+    runSequence = require('run-sequence'),
     browserSyncConfig;
 
 
@@ -53,7 +54,19 @@ function browserSyncInit(baseDir, files, browser) {
 }
 
 module.exports = gulp.task('serve', function () {
-  browserSyncInit( config.servers.browserSyncConfig.initFiles, config.servers.browserSyncConfig.watchFiles );
+  if(production){
+    runSequence('ionic:serve');
+    if(ios) runSequence('ionic:build:ios');
+    if(android) runSequence('ionic:build:android');
+  }else if(staging){
+    runSequence('ionic:serve');
+    if(ios) runSequence('ionic:emulate:ios');
+    if(android) runSequence('ionic:emulate:android');
+  }else{
+    browserSyncInit( config.servers.browserSyncConfig.initFiles, config.servers.browserSyncConfig.watchFiles );
+    if(ios) runSequence('ionic:emulate:ios:watch');
+    if(android) runSequence('ionic:emulate:android:watch');
+  }
 });
 
 

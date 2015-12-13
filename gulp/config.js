@@ -3,7 +3,13 @@ global.APP_PATH = __dirname+"/..";
 global.REPORT_PATH = APP_PATH + "/report";
 global.SRC_FOLDER = 'src';
 global.BUILD_FOLDER = 'www';
-global.TMP_FOLDER = '.tmp';
+
+if( global.mobile ){//if user wants to work on mobile emulator
+  global.TMP_FOLDER = 'www';
+}else{
+  global.TMP_FOLDER = '.tmp';
+} 
+
 global.TEMP_FROM_SRC_FOLDER = '../../' + TMP_FOLDER;
 global.MODULE_TEMP = APP_PATH + "/gulp/scaffold_template";
 

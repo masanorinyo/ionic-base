@@ -64,6 +64,10 @@ function insert_file_path(){
       insert_scss( insert_dest );
       break;
     
+    case "helper":
+      regex_text = '{{INSERT-HELPER}}';
+      break;
+
     case "service":
       regex_text = '{{INSERT-SERVICE}}';
       break;
@@ -146,7 +150,7 @@ module.exports = gulp.task("module", function(){
         type: 'list',
         name: 'module_type',
         message: 'Which would you like to make?',
-        choices: [ "module", "directive","filter","service","feature"]
+        choices: [ "module", "directive","filter","service", "helper", "feature"]
     }], function(res){
       
       module_type = res.module_type
@@ -162,6 +166,9 @@ module.exports = gulp.task("module", function(){
           break;
         case "service":
           runSequence("module:service");
+          break;
+        case "helper":
+          runSequence("module:helper");
           break;
         case "feature":
           runSequence("module:feature");
@@ -233,7 +240,30 @@ module.exports = gulp.task('module:service', function(){
       create_module(insert_file_path);
 
     }));
-})
+});
+
+module.exports = gulp.task('module:helper', function(){
+  return gulp.src(MODULE_TEMP)
+    .pipe(prompt.prompt([{
+      type: 'input',
+      name: 'module_name',
+      message: 'What is the name of the helper you want to create?',
+      validate: validate_name
+    },{
+      type: 'input',
+      name: 'module_dest',
+      message: 'where would you like to store?',
+      default: SRC_FOLDER+"/app/common/scripts/helpers"
+    }], function(res){
+      
+      module_name = res.module_name;
+      file_name = module_name.charAt(0).toLowerCase() + module_name.slice(1);
+      module_dest = define_module_dest(res.module_dest);
+      create_module(insert_file_path);
+
+    }));
+});
+
 module.exports = gulp.task('module:filter', function(){
   return gulp.src(MODULE_TEMP)
     .pipe(prompt.prompt([{

@@ -15,6 +15,12 @@ module.exports = angular.module( 'ionic-base.services', [
   require('./common/scripts/services/modal').name,
 ]);
 
+module.exports = angular.module( 'cockatoo.helpers', [
+  // "gulp module" will automatically insert a new helper
+  // DO NOT REMOVE THE BELOW COMMENT
+  //{{INSERT-HELPER}}
+]);
+
 module.exports = angular.module( 'ionic-base.filters', [
   // "gulp module" will automatically insert a new filter
   // DO NOT REMOVE THE BELOW COMMENT
@@ -43,6 +49,7 @@ module.exports = angular.module('ionic-base', [
   // own code
   "ionic-base.filters",
   "ionic-base.services",
+  "ionic-base.helpers",
   "ionic-base.directives",
   "ionic-base.modules",
   "ionic-base.constants",

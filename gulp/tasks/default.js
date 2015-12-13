@@ -15,7 +15,7 @@ module.exports = gulp.task('default', function () {
       ["browserify","styles", 'fonts'],
       "cachebust",
       "inject",
-      "ionic:ios"
+      "serve"
     );
 
   }else if ( staging ) {
@@ -30,10 +30,11 @@ module.exports = gulp.task('default', function () {
       "cachebust",
       "inject",
       ["analysis","sizereport"],
-      "ionic:serve"
+      "serve"
     );
 
   } else {
+    
     runSequence(
       "clean",
       "entry",
