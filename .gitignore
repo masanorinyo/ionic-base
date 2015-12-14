@@ -68,10 +68,5 @@ platforms
 plugins
 resources
 
-
-# ignore mis files
-*.todo
-*.TODO
-
 # compiled files
 config/protractor/protractor.config.js
