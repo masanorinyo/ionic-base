@@ -15,6 +15,7 @@ var options = minimist(process.argv.slice(2), knownOptions);
 
 //==== these need to run before "require('./config')" ===/
 // platform
+global.web = argv.web;
 global.ios = argv.ios;
 global.android = argv.android;
 global.mobile = ( global.android || global.ios );

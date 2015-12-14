@@ -55,17 +55,17 @@ function browserSyncInit(baseDir, files, browser) {
 
 module.exports = gulp.task('serve', function () {
   if(production){
-    runSequence('ionic:serve');
     if(ios) runSequence('ionic:build:ios');
     if(android) runSequence('ionic:build:android');
+    if(web || !mobile) runSequence('ionic:serve');
   }else if(staging){
-    runSequence('ionic:serve');
     if(ios) runSequence('ionic:emulate:ios');
     if(android) runSequence('ionic:emulate:android');
+    if(web || !mobile) runSequence('ionic:serve');
   }else{
-    browserSyncInit( config.servers.browserSyncConfig.initFiles, config.servers.browserSyncConfig.watchFiles );
     if(ios) runSequence('ionic:emulate:ios:watch');
     if(android) runSequence('ionic:emulate:android:watch');
+    if(web || !mobile) browserSyncInit( config.servers.browserSyncConfig.initFiles, config.servers.browserSyncConfig.watchFiles );
   }
 });
 
