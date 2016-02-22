@@ -59,12 +59,36 @@ module.exports = gulp.task('serve', function () {
     if(android) runSequence('ionic:build:android');
     if(web || !mobile) runSequence('ionic:serve');
   }else if(staging){
-    if(ios) runSequence('ionic:emulate:ios');
-    if(android) runSequence('ionic:emulate:android');
+    if(ios){
+      if(devise){
+        runSequence('ionic:run:ios:devise');
+      }else{
+        runSequence('ionic:run:ios');
+      }
+    }
+    if(android){
+      if(devise){ 
+        runSequence('ionic:run:android:devise');
+      }else{
+        runSequence('ionic:run:android');
+      }
+    }
     if(web || !mobile) runSequence('ionic:serve');
   }else{
-    if(ios) runSequence('ionic:emulate:ios:watch');
-    if(android) runSequence('ionic:emulate:android:watch');
+    if(ios){
+      if(devise){
+        runSequence('ionic:run:ios:watch:devise');
+      }else{
+        runSequence('ionic:run:ios:watch');
+      }
+    }
+    if(android){
+      if(devise){ 
+        runSequence('ionic:run:android:watch:devise');
+      }else{
+        runSequence('ionic:run:android:watch');
+      }
+    }
     if(web || !mobile) browserSyncInit( config.servers.browserSyncConfig.initFiles, config.servers.browserSyncConfig.watchFiles );
   }
 });

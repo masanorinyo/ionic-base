@@ -15,7 +15,13 @@ module.exports = angular.module( 'ionic-base.services', [
   require('./common/scripts/services/modal').name,
 ]);
 
-module.exports = angular.module( 'cockatoo.helpers', [
+module.exports = angular.module( 'ionic-base.resources', [
+  // "gulp module" will automatically insert a new resource 
+  // DO NOT REMOVE THE BELOW COMMENT
+  //{{INSERT-RESOURCE}}
+]);
+
+module.exports = angular.module( 'ionic-base.helpers', [
   // "gulp module" will automatically insert a new helper
   // DO NOT REMOVE THE BELOW COMMENT
   //{{INSERT-HELPER}}

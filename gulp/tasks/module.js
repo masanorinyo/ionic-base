@@ -71,6 +71,10 @@ function insert_file_path(){
     case "service":
       regex_text = '{{INSERT-SERVICE}}';
       break;
+
+    case "resource":
+      regex_text = '{{INSERT-RESOURCE}}';
+      break;
     
     case "directive":
       regex_text = '{{INSERT-DIRECTIVE}}';
@@ -150,7 +154,7 @@ module.exports = gulp.task("module", function(){
         type: 'list',
         name: 'module_type',
         message: 'Which would you like to make?',
-        choices: [ "module", "directive","filter","service", "helper", "feature"]
+        choices: [ "module", "directive","filter","service", "resource", "helper", "feature"]
     }], function(res){
       
       module_type = res.module_type
@@ -166,6 +170,9 @@ module.exports = gulp.task("module", function(){
           break;
         case "service":
           runSequence("module:service");
+          break;
+        case "resource":
+          runSequence("module:resource");
           break;
         case "helper":
           runSequence("module:helper");
@@ -242,6 +249,28 @@ module.exports = gulp.task('module:service', function(){
     }));
 });
 
+module.exports = gulp.task('module:resource', function(){
+  return gulp.src(MODULE_TEMP)
+    .pipe(prompt.prompt([{
+      type: 'input',
+      name: 'module_name',
+      message: 'What is the name of the resource you want to create?',
+      validate: validate_name
+    },{
+      type: 'input',
+      name: 'module_dest',
+      message: 'where would you like to store?',
+      default: SRC_FOLDER+"/app/common/scripts/resources"
+    }], function(res){
+      
+      module_name = res.module_name;
+      file_name = module_name.charAt(0).toLowerCase() + module_name.slice(1);
+      module_dest = define_module_dest(res.module_dest);
+      create_module(insert_file_path);
+
+    }));
+});
+
 module.exports = gulp.task('module:helper', function(){
   return gulp.src(MODULE_TEMP)
     .pipe(prompt.prompt([{
@@ -283,7 +312,7 @@ module.exports = gulp.task('module:filter', function(){
       module_dest = define_module_dest(res.module_dest);
       create_module(insert_file_path);
     }));
-})
+});
 
 module.exports = gulp.task('module:feature', function(){
   return gulp.src(MODULE_TEMP)
@@ -306,4 +335,4 @@ module.exports = gulp.task('module:feature', function(){
       // insert_file_path();
 
     }));
-})
+});

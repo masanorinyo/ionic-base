@@ -18,7 +18,7 @@ global.config = {
   paths: {
     src: {
       app : SRC_FOLDER + "/app",
-      assets: SRC_FOLDER + '/app/**/assets',
+      assets: SRC_FOLDER + '/app/common/assets/**/*',
       svgs: SRC_FOLDER + '/app/**/assets/svg/*',
       fonts: SRC_FOLDER + '/app/**/assets/fonts/**/*',
       images: [ 
@@ -47,7 +47,7 @@ global.config = {
         styles: TMP_FOLDER + "/app",
         scripts: TMP_FOLDER + "/app",
         images: TMP_FOLDER + "/app",
-        assets: TMP_FOLDER + "/app",
+        assets: TMP_FOLDER + "/app/common/assets",
         fonts: TMP_FOLDER + "/app",
         bowerFonts: TMP_FOLDER + "/app/common/assets/fonts",
         index: TMP_FOLDER,
@@ -62,7 +62,7 @@ global.config = {
         styles: BUILD_FOLDER + "/app",
         scripts: BUILD_FOLDER + "/app",
         images: BUILD_FOLDER + '/app',
-        assets: BUILD_FOLDER + '/app',
+        assets: BUILD_FOLDER + '/app/common/assets',
         fonts: BUILD_FOLDER + '/app',
         bowerFonts: BUILD_FOLDER + "/app/common/assets/fonts",
         index: BUILD_FOLDER,

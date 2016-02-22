@@ -10,31 +10,49 @@ module.exports = gulp.task('ionic:serve', shell.task([
 ]));
 
 module.exports = gulp.task('ionic:build:ios', shell.task([
-  "ionic build ios",
-  "ionic emulate ios"
+  "ionic build ios"
 ]));
 
 module.exports = gulp.task('ionic:build:android', shell.task([
-  "ionic build android",
-  "ionic emulate android"
+  "ionic build android"
 ]));
 
-module.exports = gulp.task('ionic:emulate:ios:watch', shell.task([
+module.exports = gulp.task('ionic:run:ios:watch:devise', shell.task([
   "ionic build ios",
-  "ionic emulate ios --livereload --consolelogs --serverlogs"
+  "ionic run ios --livereload --consolelogs --serverlogs --devise"
 ]));
 
-module.exports = gulp.task('ionic:emulate:android:watch', shell.task([
-  "ionic build android",
-  "ionic emulate android --livereload --consolelogs --serverlogs"
-]));
-
-module.exports = gulp.task('ionic:emulate:ios', shell.task([
+module.exports = gulp.task('ionic:run:ios:watch', shell.task([
   "ionic build ios",
-  "ionic emulate ios"
+  "ionic run ios --livereload --consolelogs --serverlogs"
 ]));
 
-module.exports = gulp.task('ionic:emulate:android', shell.task([
+module.exports = gulp.task('ionic:run:android:watch:devise', shell.task([
   "ionic build android",
-  "ionic emulate android"
+  "ionic run android --livereload --consolelogs --serverlogs --devise"
+]));
+
+module.exports = gulp.task('ionic:run:android:watch', shell.task([
+  "ionic build android",
+  "ionic run android --livereload --consolelogs --serverlogs"
+]));
+
+module.exports = gulp.task('ionic:run:ios:devise', shell.task([
+  "ionic build ios",
+  "ionic run ios --devise"
+]));
+
+module.exports = gulp.task('ionic:run:ios', shell.task([
+  "ionic build ios",
+  "ionic run ios"
+]));
+
+module.exports = gulp.task('ionic:run:android:devise', shell.task([
+  "ionic build android",
+  "ionic run android --devise"
+]));
+
+module.exports = gulp.task('ionic:run:android', shell.task([
+  "ionic build android",
+  "ionic run android"
 ]));
